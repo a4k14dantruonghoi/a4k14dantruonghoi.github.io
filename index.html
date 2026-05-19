@@ -122,115 +122,105 @@ body {
     transform: translateY(20px);
     transition: all 1s ease; 
 }
-header { height: 45vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
-    padding: 0 20px; }
-header h2 { font-size: 80px; font-weight: 800; background: linear-gradient(90deg, #0284c7, #ec4899, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    letter-spacing: -2px; text-shadow: 0 4px 12px rgba(255,255,255,0.6); }
-header p { max-width: 600px; margin-top: 15px; font-size: 18px; color: #334155; font-weight: 600;
-    line-height: 1.6; text-shadow: 0 2px 8px rgba(255,255,255,0.8); }
-.nickname { margin-top: 25px; padding: 10px 24px; background: #fef3c7; border: 1px solid #f59e0b;
-    border-radius: 50px; color: #d97706; font-weight: 600; font-size: 15px; box-shadow: 0 4px 10px rgba(245, 158, 11, 0.15);
+header { height: 45vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 20px; }
+header h2 { font-size: 80px; font-weight: 800; background: linear-gradient(90deg, #0284c7, #ec4899, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -2px; text-shadow: 0 4px 12px rgba(255,255,255,0.6); }
+header p { max-width: 600px; margin-top: 15px; font-size: 18px; color: #334155; font-weight: 600; line-height: 1.6; text-shadow: 0 2px 8px rgba(255,255,255,0.8); }
+
+.developer-signature {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #475569;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 6px 16px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(226, 232, 240, 0.5);
 }
+.gradient-name {
+    background: linear-gradient(90deg, #0284c7, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+.nickname { margin-top: 25px; padding: 10px 24px; background: #fef3c7; border: 1px solid #f59e0b; border-radius: 50px; color: #d97706; font-weight: 600; font-size: 15px; box-shadow: 0 4px 10px rgba(245, 158, 11, 0.15); }
 
 section { padding: 20px 5% 100px 5%; }
-.title { text-align: center; font-size: 32px; margin-bottom: 20px; font-weight: 800; color: #1e293b;
-    text-shadow: 0 2px 4px rgba(255,255,255,0.5); }
-.subtitle { text-align: center; font-size: 16px; color: #475569; margin-bottom: 40px; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 1px; text-shadow: 0 2px 4px rgba(255,255,255,0.5); }
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; margin-bottom: 60px;
+.title { text-align: center; font-size: 32px; margin-bottom: 20px; font-weight: 800; color: #1e293b; text-shadow: 0 2px 4px rgba(255,255,255,0.5); }
+.subtitle { text-align: center; font-size: 16px; color: #475569; margin-bottom: 40px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; text-shadow: 0 2px 4px rgba(255,255,255,0.5); }
+
+/* GRID BỐ TRÍ THÀNH VIÊN */
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 25px; 
+    margin-bottom: 60px;
 }
 
-/* THẺ THÀNH VIÊN KIỂU CHÂN THỰC */
+/* THẺ THÀNH VIÊN */
 .member {
     background: rgba(255, 255, 255, 0.88);
     border: 1px solid rgba(241, 245, 249, 0.9);
-    border-radius: 24px; padding: 30px 25px; text-align: center; backdrop-filter: blur(8px);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); position: relative; overflow: hidden; cursor: pointer;
+    border-radius: 24px; 
+    padding: 30px 25px; 
+    text-align: center; 
+    backdrop-filter: blur(8px);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); 
+    position: relative; 
+    overflow: hidden; 
+    cursor: pointer;
     box-shadow: 0 10px 25px rgba(148, 163, 184, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.member:hover { transform: translateY(-8px); border-color: #f48ff5;
-    box-shadow: 0 20px 35px rgba(244, 143, 177, 0.25); }
+.member:hover { transform: translateY(-8px); border-color: #f48ff5; box-shadow: 0 20px 35px rgba(244, 143, 177, 0.25); }
 
-/* Thẻ giáo viên đặc biệt đứng đầu */
-.teacher-card { border: 1px solid #fcd34d;
-    background: rgba(255, 254, 243, 0.95); }
+/* Thẻ giáo viên đặc biệt */
+.teacher-card { border: 1px solid #fcd34d; background: rgba(255, 254, 243, 0.95); }
 .teacher-avatar { background: linear-gradient(135deg, #fcd34d, #f97316) !important; }
-.teacher-tag { background: #fef3c7 !important;
-    border: 1px solid #f59e0b; color: #b45309 !important; }
+.teacher-tag { background: #fef3c7 !important; border: 1px solid #f59e0b; color: #b45309 !important; }
 
-.avatar-box { width: 110px; height: 110px; margin: 0 auto 18px auto; border-radius: 50%;
-    padding: 4px; background: linear-gradient(135deg, #38bdf8, #f48ff5); box-shadow: 0 8px 15px rgba(56, 189, 248, 0.15); }
-.avatar-box img { width: 100%;
-    height: 100%; object-fit: cover; border-radius: 50%; background: #f8fafc; }
-.mem-name { font-size: 19px; font-weight: 700; color: #1e293b; margin-bottom: 6px;
-}
-.mem-role { font-size: 13px; color: #0284c7; font-weight: 600; margin-bottom: 16px; background: #e0f2fe; display: inline-block; padding: 4px 14px; border-radius: 20px;
-}
-.mem-desc { font-size: 14px; color: #475569; line-height: 1.6; min-height: 44px; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
-}
-.tag { display: inline-block; padding: 5px 14px; background: #f1f5f9; color: #475569; border-radius: 50px; font-size: 12px; margin-top: 18px; font-weight: 600;
-}
+.avatar-box { width: 110px; height: 110px; margin: 0 auto 18px auto; border-radius: 50%; padding: 4px; background: linear-gradient(135deg, #38bdf8, #f48ff5); box-shadow: 0 8px 15px rgba(56, 189, 248, 0.15); flex-shrink: 0; }
+.avatar-box img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; background: #f8fafc; }
 
-/* POPUP */
+.mem-name { font-size: 19px; font-weight: 700; color: #1e293b; margin-bottom: 6px; height: 26px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; text-overflow: ellipsis; }
+.mem-role { font-size: 13px; color: #0284c7; font-weight: 600; margin-bottom: 16px; background: #e0f2fe; display: inline-block; padding: 4px 14px; border-radius: 20px; height: 28px; line-height: 20px; overflow: hidden; }
+.mem-desc { font-size: 14px; color: #475569; line-height: 1.6; height: 44px; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: auto; }
+.tag { display: inline-block; padding: 5px 14px; background: #f1f5f9; color: #475569; border-radius: 50px; font-size: 12px; margin-top: 18px; font-weight: 600; flex-shrink: 0; }
+
+/* POPUP CHI TIẾT */
 #modal-overlay {
-    position: fixed; inset: 0; background: rgba(15, 23, 42, 0.3);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    z-index: 10000; display: flex; justify-content: center; align-items: center;
-    opacity: 0; visibility: hidden; transition: all 0.4s ease; padding: 20px;
+    position: fixed; inset: 0; background: rgba(15, 23, 42, 0.3); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); z-index: 10000; display: flex; justify-content: center; align-items: center; opacity: 0; visibility: hidden; transition: all 0.4s ease; padding: 20px;
 }
 #modal-overlay.active { opacity: 1; visibility: visible; }
 .modal-content {
-    background: #ffffff; border: 1px solid #e2e8f0;
-    border-radius: 32px;
-    width: 100%; max-width: 520px; padding: 35px;
-    box-shadow: 0 30px 60px rgba(15, 23, 42, 0.1); text-align: center;
-    position: relative;
-    transform: translateY(30px) scale(0.95); transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    background: #ffffff; border: 1px solid #e2e8f0; border-radius: 32px; width: 100%; max-width: 520px; padding: 35px; box-shadow: 0 30px 60px rgba(15, 23, 42, 0.1); text-align: center; position: relative; transform: translateY(30px) scale(0.95); transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-#modal-overlay.active .modal-content { transform: translateY(0) scale(1);
-}
+#modal-overlay.active .modal-content { transform: translateY(0) scale(1); }
 .close-modal {
-    position: absolute; top: 20px; right: 20px; width: 36px; height: 36px;
-    background: #f1f5f9; border: none;
-    border-radius: 50%;
-    color: #64748b; font-size: 16px; cursor: pointer; transition: 0.3s; display: flex; justify-content: center; align-items: center;
+    position: absolute; top: 20px; right: 20px; width: 36px; height: 36px; background: #f1f5f9; border: none; border-radius: 50%; color: #64748b; font-size: 16px; cursor: pointer; transition: 0.3s; display: flex; justify-content: center; align-items: center;
 }
-.close-modal:hover { background: #fee2e2;
-    color: #ef4444; transform: rotate(90deg); }
-.modal-avatar { width: 130px; height: 130px; margin: 0 auto 20px auto; border-radius: 50%; padding: 4px;
-    background: linear-gradient(135deg, #3b82f6, #ec4899); }
-.modal-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; background: white;
-}
-.modal-history { text-align: left; background: #f8fafc; padding: 20px; border-radius: 18px; margin: 20px 0; font-size: 14px; color: #475569; line-height: 1.6;
-    border-left: 4px solid #38bdf8; }
+.close-modal:hover { background: #fee2e2; color: #ef4444; transform: rotate(90deg); }
+.modal-avatar { width: 130px; height: 130px; margin: 0 auto 20px auto; border-radius: 50%; padding: 4px; background: linear-gradient(135deg, #3b82f6, #ec4899); }
+.modal-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; background: white; }
+.modal-history { text-align: left; background: #f8fafc; padding: 20px; border-radius: 18px; margin: 20px 0; font-size: 14px; color: #475569; line-height: 1.6; border-left: 4px solid #38bdf8; }
 .ability-section { text-align: left; margin-top: 20px; }
-.ability-title { font-size: 13px; font-weight: 700; color: #b45309; margin-bottom: 12px;
-    text-transform: uppercase; letter-spacing: 0.5px;}
+.ability-title { font-size: 13px; font-weight: 700; color: #b45309; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;}
 .skill-bar-wrapper { margin-bottom: 12px; }
-.skill-info { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px; color: #334155;
-    font-weight: 600; }
+.skill-info { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px; color: #334155; font-weight: 600; }
 .skill-track { width: 100%; height: 8px; background: #e2e8f0; border-radius: 10px; overflow: hidden; }
-.skill-fill { height: 100%; width: 0%;
-    background: linear-gradient(90deg, #38bdf8, #f48ff5); border-radius: 10px; transition: width 1s ease-in-out;
-}
+.skill-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #38bdf8, #f48ff5); border-radius: 10px; transition: width 1s ease-in-out; }
 
 /* ĐĨA NHẠC XOAY TRÒN */
 .music-control {
-    position: fixed; bottom: 25px; left: 25px; z-index: 999;
-    width: 54px;
-    height: 54px; background: #ffffff;
-    border: 2px solid #e2e8f0; border-radius: 50%;
-    cursor: pointer; display: none; justify-content: center; align-items: center;
-    box-shadow: 0 10px 25px rgba(148,163,184,0.2);
-    transition: all 0.3s ease;
+    position: fixed; bottom: 25px; left: 25px; z-index: 999; width: 54px; height: 54px; background: #ffffff; border: 2px solid #e2e8f0; border-radius: 50%; cursor: pointer; display: none; justify-content: center; align-items: center; box-shadow: 0 10px 25px rgba(148,163,184,0.2); transition: all 0.3s ease;
 }
 .music-control:hover { transform: scale(1.1); border-color: #ec4899; }
-.music-icon { font-size: 22px;
-    pointer-events: none; }
+.music-icon { font-size: 22px; pointer-events: none; }
 .rotate-music { animation: spinning 4s linear infinite; }
-@keyframes spinning { from { transform: rotate(0deg);
-    } to { transform: rotate(360deg); } }
+@keyframes spinning { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 </style>
 </head>
 
@@ -336,14 +326,15 @@ function checkAnswer(isCorrect) {
     }
 }
 
-const style = document.createElement('style');
-style.innerHTML = `
+const styleScript = document.createElement('style');
+styleScript.innerHTML = `
 @keyframes shake {
     0%, 100% { transform: translateX(0); }
     25% { transform: translateX(-8px); }
     75% { transform: translateX(8px); }
 }`;
-document.head.appendChild(style);
+document.head.appendChild(styleScript);
+
 function verifySuccess() {
     document.getElementById("auth-page").style.opacity = "0";
     document.getElementById("auth-page").style.transform = "scale(0.9) translateY(-30px)";
@@ -366,12 +357,10 @@ function toggleMusic() {
     }
 }
 
-// DANH SÁCH ĐÃ ĐƯỢC XÁO TRỘN CỐ ĐỊNH 1 LẦN DUY NHẤT VÀ CẬP NHẬT ROLE BAN CÁN SỰ CHUẨN XÁC
+// DANH SÁCH TOÀN BỘ LỚP HỌC (THẲNG HÀNG TĂM TẮP THEO LIÊN KẾT LIỀN MẠCH)
 const finalStaticClassData = [
-    // 1. Cô Hiếu đứng đầu lớp trang trọng
     { type: "teacher", name: "Cô Hiếu", role: "Giáo Viên Chủ Nhiệm Lớp 8D 👩‍🏫", desc: "Người mẹ hiền thứ hai luôn bao dung và yêu thương che chở đàn con.", tag: "❤️ Chủ Nhiệm", img: "https://github.com/a4k14dantruonghoi/a4k14dantruonghoi.github.io/blob/main/anhcohieu.png?raw=true", history: "Cô Hiếu kính yêu luôn luôn lắng nghe tâm sự, động viên từng học sinh và là người giữ lửa, dẫn dắt đại gia đình 8D vượt qua mọi hành trình đáng nhớ.", skills: [{n: "Yêu thương lớp học", v: "100%"}, {n: "Tâm lý & Chu đáo", v: "98%"}, {n: "Bao dung", v: "100%"}] },
     
-    // 2. Các bạn thuộc Ban cán sự cố định theo thứ tự và role chuẩn của bạn
     { type: "leader", name: "Đoàn Khánh Thư", role: "Lớp Trưởng Quyền Lực 👑", desc: "Thủ lĩnh đáng yêu, kết nối trái tim của tất cả thành viên trong lớp.", tag: "👑 Lớp Trưởng", img: "https://github.com/a4k14dantruonghoi/a4k14dantruonghoi.github.io/blob/main/anhkhanhthu.png?raw=true", history: "Biệt danh 'Bé bự quyền lực nhưng siêu dễ thương'. Khánh Thư gánh vác mọi công việc chung của lớp bằng sự công bằng, vui tính và cực kỳ tâm lý với bạn bè.", skills: [{n: "Uy tín điều hành", v: "100%"}, {n: "Độ bao dung", v: "95%"}, {n: "Chỉ số đáng yêu", v: "98%"}] },
     { type: "leader", name: "Nguyễn Khánh Huyền", role: "Lớp Phó kiêm Tổ Trưởng Tổ 1 ⭐", desc: "Cán sự tháo vát, gánh vác trách nhiệm nhân đôi vô cùng xuất sắc.", tag: "⭐ Lớp Phó / Tổ Trưởng T1", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300", history: "Khánh Huyền luôn đi đầu trong các phong trào gắn kết bạn bè. Sự hăng hái và nụ cười tỏa nắng của bạn giúp lớp mình luôn vui tươi.", skills: [{n: "Trách nhiệm", v: "99%"}, {n: "Hòa đồng", v: "95%"}, {n: "Khéo tay", v: "90%"}] },
     { type: "leader", name: "Lê Thị Hà Giang", role: "Tổ Trưởng Tổ 2 ⚡", desc: "Tác phong nhanh nhẹn, cá tính mạnh mẽ và vô cùng kiên định.", tag: "⚡ Tổ Trưởng Tổ 2", img: "https://github.com/a4k14dantruonghoi/a4k14dantruonghoi.github.io/blob/main/anhgiang.png?raw=true", history: "Hà Giang là một cô gái thẳng thắn, mạnh mẽ, luôn biết cách tổ chức công việc và bảo vệ bạn bè khi cần thiết. Một chỗ dựa tinh thần đáng tin cậy.", skills: [{n: "Quyết đoán", v: "95%"}, {n: "Tinh thần đồng đội", v: "90%"}, {n: "Tự lập", v: "92%"}] },
@@ -380,10 +369,9 @@ const finalStaticClassData = [
     { type: "leader", name: "Nguyễn An Ngọc", role: "Tổ Phó Tổ 1 🍃", desc: "Giọng nói ngọt ngào, tác phong nhã nhặn và rất điềm đạm.", tag: "🍃 Tổ Phó Tổ 1", img: "https://github.com/a4k14dantruonghoi/a4k14dantruonghoi.github.io/blob/main/anhanngoc.png?raw=true", history: "An Ngọc mang đến cho lớp một làn gió dịu mát đầy thư thái nhờ tính cách hiền hòa, cách ứng xử vô cùng khéo léo và biết quan tâm đến cảm xúc người khác.", skills: [{n: "Khéo léo", v: "94%"}, {n: "Dịu dàng", v: "96%"}, {n: "Chu đáo", v: "93%"}] },
     { type: "leader", name: "Lê Kiều Chi", role: "Tổ Phó Tổ 2 🎀", desc: "Nàng thơ nhẹ nhàng, thích sáng tạo và làm đồ handmade.", tag: "🎀 Tổ Phó Tổ 2", img: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&q=80&w=300", history: "Kiều Chi nổi tiếng với đôi tay khéo léo và gu thẩm mỹ cực xịn. Những tờ báo tường hay góc trang trí của lớp luôn có dấu ấn tỉ mỉ của cô bạn này.", skills: [{n: "Sáng tạo", v: "96%"}, {n: "Nhẹ nhàng", v: "92%"}, {n: "Kiên nhẫn", v: "94%"}] },
     { type: "leader", name: "Lê Huyền Sang", role: "Tổ Phó Tổ 3 🌸", desc: "Tính cách hòa nhã, luôn là cầu nối tình bạn thắm thiết.", tag: "🌸 Tổ Phó Tổ 3", img: "https://github.com/a4k14dantruonghoi/a4k14dantruonghoi.github.io/blob/main/anhsang.png?raw=true", history: "Huyền Sang luôn yêu thương bạn bè, sống hòa thuận, không bao giờ giận dỗi ai lâu và luôn nỗ lực hết mình để vun đắp kỷ niệm đẹp cho lớp.", skills: [{n: "Chỉ số gắn kết", v: "95%"}, {n: "Thân thiện", v: "94%"}, {n: "Lắng nghe", v: "92%"}] },
-    { type: "leader", name: "Lê Hải Yến", role: "Tổ Phó Tổ 4 💪", desc: "Cán sự tổ nhiệt tình, tháo vát và có trách nhiệm cao.", tag: "💪 Tổ Phó Tổ 4", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300", history: "Hải Yến cực kỳ xông xáo trong các công việc thu nộp vở của tổ. Cô bạn điều hành các thành viên thực hiện nghiêm túc nội quy chung.", skills: [{n: "Tốc độ làm việc", v: "96%"}, {n: "Trách nhiệm", v: "95%"}, {n: "Kiên định", v: "92%"}] },
+    { type: "leader", name: "Lê Hải Yến", role: "Tổ Phó Tổ 4 💪", desc: "Cán sự tổ nhiệt tình, tháo vát và có trách nhiệm cao.", tag: "💪 Phó Tổ 4", img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=300", history: "Hải Yến cực kỳ xông xáo trong các công việc thu nộp vở của tổ. Cô bạn điều hành các thành viên thực hiện nghiêm túc nội quy chung.", skills: [{n: "Tốc độ làm việc", v: "96%"}, {n: "Trách nhiệm", v: "95%"}, {n: "Kiên định", v: "92%"}] },
 
-    // 3. TOÀN BỘ THÀNH VIÊN THƯỜNG ĐÃ ĐƯỢC TRỘN NGẪU NHIÊN 1 LẦN DUY NHẤT (VÀ SẼ GIỮ NGUYÊN VỊ TRÍ NÀY MÃI MÃI KHÔNG THAY ĐỔI)
-    { type: "member", name: "Trần Quang Hải", role: "Thành Viên Lớp A4", desc: "Chuyên gia kỹ thuật độc nhất vu nhị, máy chiếu slide cứ để Hải lo.", tag: "💻 Công Nghệ", img: "https://images.unsplash.com/photo-1506803682981-6e718a9dd3ee?auto=format&fit=crop&q=80&w=300", history: "Trùm công nghệ đích thực của lớp mình, người đứng sau các buổi thuyết trình mượt mà và sửa lỗi máy móc cực đỉnh. Tư duy logic siêu xịn.", skills: [{n: "Kỹ năng phần cứng", v: "100%"}, {n: "Tư duy logic", v: "98%"}, {n: "Hỗ trợ kỹ thuật", v: "95%"}] },
+    { type: "member", name: "Trần Quang Hải", role: "Thành Viên Lớp A4", desc: "Chuyên gia kỹ thuật độc nhất vô nhị, máy chiếu slide cứ để Hải lo.", tag: "💻 Công Nghệ", img: "https://images.unsplash.com/photo-1506803682981-6e718a9dd3ee?auto=format&fit=crop&q=80&w=300", history: "Trùm công nghệ đích thực của lớp mình, người đứng sau các buổi thuyết trình mượt mà và sửa lỗi máy móc cực đỉnh. Tư duy logic siêu xịn.", skills: [{n: "Kỹ năng phần cứng", v: "100%"}, {n: "Tư duy logic", v: "98%"}, {n: "Hỗ trợ kỹ thuật", v: "95%"}] },
     { type: "member", name: "Phan Dương Hoàng", role: "Thành Viên Lớp A4", desc: "Cậu bạn điềm đạm, khiêm tốn và luôn không ngừng học hỏi.", tag: "🌿 Điềm Đạm", img: "https://github.com/a4k14dantruonghoi/a4k14dantruonghoi.github.io/blob/main/anhhoang.png?raw=true", history: "Dương Hoàng ít khi lớn tiếng, bạn luôn bình tĩnh xử lý mọi việc xung quanh và sở hữu một trái tim cực kỳ ấm áp, luôn biết nghĩ cho người khác.", skills: [{n: "Điềm tĩnh", v: "95%"}, {n: "Hỗ trợ bạn bè", v: "93%"}, {n: "Thấu hiểu", v: "90%"}] },
     { type: "member", name: "Nguyễn Thị Bảo An", role: "Thành Viên Lớp A4", desc: "Cô bạn hiền hòa, thanh tú và luôn sở hữu nụ cười rạng rỡ.", tag: "🌸 Tinh Tế", img: "https://github.com/a4k14dantruonghoi/a4k14dantruonghoi.github.io/blob/main/anhan.png?raw=true", history: "Bảo An là một cô gái vô cùng dịu dàng, chu đáo. Bạn luôn chia sẻ và giúp đỡ mọi người xung quanh bằng tấm lòng chân thành nhất.", skills: [{n: "Độ đáng yêu", v: "95%"}, {n: "Năng lượng tích cực", v: "90%"}, {n: "Bắt trend", v: "85%"}] },
     { type: "member", name: "Trần Thị Hải Hiếu", role: "Thành Viên Lớp A4", desc: "Mảnh ghép kiên trì, sở hữu ý chí quyết tâm vươn lên bền bỉ.", tag: "✨ Ý Chí", img: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=300", history: "Hải Hiếu khiến thầy cô và bạn bè vô cùng tự hào nhờ ý chí kiên định, không bao giờ chịu lùi bước trước khó khăn, luôn chăm chỉ rèn luyện tích lũy kiến thức mỗi ngày.", skills: [{n: "Ý chí kiên định", v: "98%"}, {n: "Sự chăm chỉ", v: "95%"}, {n: "Tinh thần cầu tiến", v: "96%"}] },
@@ -394,7 +382,7 @@ const finalStaticClassData = [
     { type: "member", name: "Nguyễn Minh Quân", role: "Thành Viên Lớp A4", desc: "Cậu bạn tràn đầy sức trẻ, đam mê các bộ môn văn học.", tag: "Vui Vẻ", img: "https://github.com/a4k14dantruonghoi/a4k14dantruonghoi.github.io/blob/main/anhminhquan.png?raw=true", history: "Minh Quân là nhân tố học giỏi của con trai, tính cách sảng khoái, yêu thích roblox và luôn mang đến nguồn năng lượng tràn đầy sinh khí cho các bạn.", skills: [{n: "Học giỏi", v: "95%"}, {n: "Hài hước", v: "90%"}, {n: "Hòa nhập", v: "92%"}] },
     { type: "member", name: "Lê Anh Thư", role: "Thành Viên Lớp A4", desc: "Chu đáo, nhẹ nhàng, cô bạn xinh xắn ghi chép bài vở vô cùng ngăn nắp.", tag: "📖 Chu Đáo", img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=300", history: "Anh Thư được bạn bè yêu mến vì sự chu đáo, luôn mang theo đầy đủ đồ dùng học tập để sẵn sàng cho các bạn mượn mỗi khi có ai đó quên.", skills: [{n: "Cẩn thận", v: "95%"}, {n: "Tận tâm", v: "94%"}, {n: "Nhẹ nhàng", v: "96%"}] },
     { type: "member", name: "Trần Thị Mai Linh", role: "Thành Viên Lớp A4", desc: "Cần cù, tỉ mỉ và luôn hoàn thành tốt mọi kế hoạch đề ra.", tag: "🌸 Cần Mẫn", img: "https://github.com/a4k14dantruonghoi/a4k14dantruonghoi.github.io/blob/main/anhmailinh.png?raw=true", history: "Mai Linh sở hữu đức tính kiên nhẫn đáng quý. Gặp việc khó bạn không bao giờ bỏ cuộc nửa chừng mà luôn tỉ mỉ tìm cách giải quyết tối ưu.", skills: [{n: "Kiên nhẫn", v: "96%"}, {n: "Cẩn thận", v: "95%"}, {n: "Nỗ lực", v: "94%"}] },
-    { type: "member", name: "Vương Văn Hiếu", role: "Thành Viên Lớp A4", desc: "Luôn tập trung học hỏi, cải thiện bản thân từng ngày.", tag: "🌿 Tiên Bộ", img: "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&q=80&w=300", history: "Văn Hiếu giữ vững thái độ cầu thị, siêng năng ghi chép lời thầy cô giảng bài trên lớp và luôn thể hiện tinh thần quyết tâm cao độ.", skills: [{n: "Chăm chú lắng nghe", v: "95%"}, {n: "Ý chí vươn lên", v: "93%"}, {n: "Điềm tĩnh", v: "90%"}] },
+    { type: "member", name: "Vương Văn Hiếu", role: "Thành Viên Lớp A4", desc: "Luôn tập trung học hỏi, cải thiện bản thân từng ngày.", tag: "🌿 Tiến Bộ", img: "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&q=80&w=300", history: "Văn Hiếu giữ vững thái độ cầu thị, siêng năng ghi chép lời thầy cô giảng bài trên lớp và luôn thể hiện tinh thần quyết tâm cao độ.", skills: [{n: "Chăm chú lắng nghe", v: "95%"}, {n: "Ý chí vươn lên", v: "93%"}, {n: "Điềm tĩnh", v: "90%"}] },
     { type: "member", name: "Lê Văn Thành", role: "Thành Viên Lớp A4", desc: "Chân thành, mộc mạc và luôn xông xáo trong các hoạt động.", tag: "☘️ Hoạt Bát", img: "https://github.com/a4k14dantruonghoi/a4k14dantruonghoi.github.io/blob/main/anhthanh.png?raw=true", history: "Văn Thành luôn cư xử lịch thiệp và chan hòa với bạn bè cũng như bạn là 1 người đam mê bóng đá bóng chuyền.", skills: [{n: "Nhiệt huyết", v: "92%"}, {n: "Thật thà", v: "98%"}, {n: "Đồng đội", v: "90%"}] },
     { type: "member", name: "Nguyễn Quang Huy", role: "Thành Viên Lớp A4", desc: "Cậu bạn hoạt bát, phản xạ nhanh và cực kỳ yêu thích bóng đá và bóng chuyền.", tag: "🎈 Hóm Hỉnh", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300", history: "Quang Huy là người mang lại những tràng cười sảng khoái nhờ những phát ngôn vô cùng thông minh và hóm hỉnh trong các giờ sinh hoạt tập thể.", skills: [{n: "Hài hước", v: "96%"}, {n: "Nhạy bén", v: "92%"}, {n: "Thể thao", v: "94%"}] },
     { type: "member", name: "Lê Viết Thắng", role: "Thành Viên Lớp A4", desc: "Hành xử chín chắn, chuyên gánh vác việc nặng của lớp.", tag: "🕺 Ga Lăng", img: "https://github.com/a4k14dantruonghoi/a4k14dantruonghoi.github.io/blob/main/anhthang.png?raw=true", history: "Nói ít làm nhiều, Viết Thắng luôn ga lăng bê vác bàn ghế, giúp đỡ các bạn nữ trực nhật mà không hề nề hà, một chỗ dựa uy tín của lớp.", skills: [{n: "Độ ga lăng", v: "98%"}, {n: "Bản lĩnh", v: "94%"}, {n: "Đồng đội", v: "92%"}] },
@@ -413,7 +401,9 @@ const finalStaticClassData = [
     { type: "member", name: "Dương Lê Thông", role: "Thành Viên Lớp A4", desc: "Chàng trai tốt bụng, hay giúp đỡ mọi người việc nặng nhọc.", tag: "🤗 Tốt Bụng", img: "https://images.unsplash.com/photo-1513956589380-bad6acb9b9d4?auto=format&fit=crop&q=80&w=300", history: "Lê Thông có tấm lòng trượng nghĩa, luôn xung phong mang vác bàn ghế hay dọn dẹp phòng học giúp các bạn nữ trong tổ mà chẳng hề nề hà.", skills: [{n: "Giúp đỡ bạn bè", v: "98%"}, {n: "Nhiệt tình", v: "94%"}, {n: "Hòa đồng", v: "90%"}] },
     { type: "member", name: "Lương Thanh Tú", role: "Thành Viên Lớp A4", desc: "Tinh thần cầu tiến cao, luôn khao khát tự hoàn thiện bản thân.", tag: "✨ Cầu Tiến", img: "https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&q=80&w=300", history: "Thanh Tú luôn đặt ra cho mình những mục tiêu rõ ràng và không ngừng cố gắng rèn luyện mỗi ngày để trở thành phiên bản tốt hơn của chính mình.", skills: [{n: "Ý chí bứt phá", v: "94%"}, {n: "Kiên định", v: "92%"}, {n: "Tập trung", v: "90%"}] },
     { type: "member", name: "Nguyễn Gia Khang", role: "Thành Viên Lớp A4", desc: "Đặng tin cậy, nói được làm được và cực kỳ giữ lời hứa.", tag: "🌿 Uy Tín", img: "https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?auto=format&fit=crop&q=80&w=300", history: "Gia Khang sở hữu lối sống trách nhiệm cao với tập thể lớp. Bạn luôn hoàn thành xuất sắc những nhiệm vụ trực nhật hoặc bài tập nhóm được giao.", skills: [{n: "Trách nhiệm", v: "95%"}, {n: "Giữ lời hứa", v: "98%"}, {n: "Tập trung", v: "90%"}] },
-    { type: "member", name: "Hoàng Mai Việt Hoà", role: "Thành Viên Lớp A4", desc: "Gương mặt hiền lành, luôn sẵn lòng sẻ chia cùng bạn bè xung quanh.", tag: "🌻 Hiền Lành", img: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&q=80&w=300", history: "Việt Hòa là một chàng trai ấm áp, luôn nói lời hay ý đẹp và âm thầm giúp đỡ mọi người những lúc gặp khó khăn mà không cần phô trương.", skills: [{n: "Chỉ số tốt bụng", v: "97%"}, {n: "Lắng nghe", v: "93%"}, {n: "Hòa nhã", v: "92%"}] }
+    { type: "member", name: "Hoàng Mai Việt Hoà", role: "Thành Viên Lớp A4", desc: "Gương mặt hiền lành, luôn sẵn lòng sẻ chia cùng bạn bè xung quanh.", tag: "🌻 Hiền Lành", img: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&q=80&w=300", history: "Việt Hòa là một chàng trai ấm áp, luôn nói lời hay ý đẹp và âm thầm giúp đỡ mọi người những lúc gặp khó khăn mà không cần phô trương.", skills: [{n: "Chỉ số tốt bụng", v: "97%"}, {n: "Lắng nghe", v: "93%"}, {n: "Hòa nhã", v: "92%"}] },
+    { type: "member", name: "Lê Quốc Đạt", role: "Thành Viên Lớp A4", desc: "Luôn mang nụ cười trên môi, tinh thần lạc quan yêu đời.", tag: "☀️ Lạc Quan", img: "https://images.unsplash.com/photo-1496345875659-11f7dd282d1d?auto=format&fit=crop&q=80&w=300", history: "Quốc Đạt rất nhanh nhẹn và năng nổ bắt chuyện với mọi người, lan tỏa nguồn năng lượng vui tươi giúp xua tan căng thẳng cho cả lớp.", skills: [{n: "Chỉ số lạc quan", v: "96%"}, {n: "Thân thiện", v: "94%"}, {n: "Hòa nhập", v: "92%"}] },
+    { type: "member", name: "Võ Trọng Phát", role: "Thành Viên Lớp A4", desc: "Chàng trai ga lăng, thích giao lưu kết bạn và rất nhiệt tình.", tag: "🎈 Đồng Đội Uy Tín", img: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=300", history: "Trọng Phát nổi tiếng vui vẻ, nói chuyện cuốn hút và luôn là một người đồng đội vô cùng ăn ý trong các trò chơi tập thể của lớp.", skills: [{n: "Giao tiếp", v: "94%"}, {n: "Đồng đội", v: "95%"}, {n: "Bắt trend", v: "90%"}] }
 ];
 
 window.onload = function() {
@@ -427,7 +417,6 @@ function renderClass() {
     finalStaticClassData.forEach((member, index) => {
         const memDiv = document.createElement("div"); 
         
-        // Thiết kế style riêng tùy theo loại đối tượng
         if(member.type === "teacher") {
             memDiv.className = "member teacher-card";
             memDiv.innerHTML = `
